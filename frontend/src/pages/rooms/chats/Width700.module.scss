@@ -1,0 +1,74 @@
+.container{
+    margin-bottom: 0.5rem;
+
+    .findChats{
+        img{
+            width: 35px;
+            height: 35px;
+            border-radius: 50px;
+            margin: 0 0.5rem;
+        }
+        button{
+            display: flex;
+            align-items: center;
+            padding: 0.2rem 0.5rem;
+            transition: ease-in-out 0.5s;
+
+            &:hover{
+                border-radius: 50px;
+                background-color: var(--clr-main);
+            }
+        }
+    }
+
+    .chatList{
+        position: absolute;
+        background-color: var(--clr-background);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        z-index: 1;
+        padding: 0.5rem;
+
+        .element{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            width: 100%;
+            padding: 0.3rem;
+            background-color: var(--clr-light-transparent);
+            border: 1px solid transparent;
+            transition: ease-in-out 0.5s;
+            border-radius: 5px;
+
+            &:hover{
+                background-color: var(--clr-dark-transparent);
+                border-radius: 50px;
+                border-color: var(--clr-main);
+            }
+
+            .image{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50px;
+                    margin: 0 0.5rem;
+                }
+            }
+
+            .admin{
+                margin: 0 0.5rem;
+                svg{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        .selected{
+            background-color: var(--clr-main);
+        }
+    }
+
+}

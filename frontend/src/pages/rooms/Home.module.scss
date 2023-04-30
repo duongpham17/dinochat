@@ -1,0 +1,26 @@
+.container{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    gap: 1rem;
+    grid-template-areas: 
+    "chats rooms";
+
+    .chats{
+        grid-area: chats;
+        min-width:180px;
+    }
+    
+    .rooms{
+        grid-area: rooms;
+    }
+
+    @media (max-width: 700px) {
+        gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "chats"
+        "rooms";
+    }
+
+}

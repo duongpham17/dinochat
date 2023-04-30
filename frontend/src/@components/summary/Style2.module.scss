@@ -1,0 +1,16 @@
+.container{
+    cursor: pointer;
+}
+
+.open{
+    transition: 0.5s;
+    rotate: 180deg;
+}
+
+.arrows{
+    width: 100%;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

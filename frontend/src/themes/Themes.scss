@@ -1,0 +1,76 @@
+button, a, input, textarea, ul, li, option, select, svg,
+p, q, b, label, span, kbd, small,
+h1, h2, h3, h4, h5, h6,
+div, section, main, table, form, header, nav, footer{
+    color: var(--clr-text);
+}
+
+::placeholder{
+    color: rgba(128, 128, 128, 0.377);
+}
+
+.theme-light{
+    --clr-background: white;
+    --clr-main: #3199ef;
+    --clr-main-light: rgb(224, 239, 255);
+
+    --clr-text: #555555;
+    --clr-text-light: #696869df;
+    
+    --clr-light: rgb(204, 204, 204);
+    --clr-light-transparent: rgba(203, 203, 203, 0.385);
+
+    --clr-dark: rgb(197, 199, 200);
+    --clr-dark-transparent: rgba(238, 238, 238, 0.43);
+
+    --clr-blue: rgb(36, 139, 243);
+    --clr-blue-transparent: rgba(36, 139, 243, 0.779);
+
+    --clr-red: rgb(252, 88, 88);
+    --clr-green: rgb(90, 209, 90);
+    --clr-yellow: rgb(243, 227, 11);
+}
+
+.theme-night{
+    --clr-background: black;
+    --clr-main: rgb(14, 124, 235);
+    --clr-main-light: #1d76bec2;;
+
+    --clr-text: white;
+    --clr-text-light: #d1d1d1;
+
+    --clr-light: rgba(243, 243, 243, 0.826);
+    --clr-light-transparent: rgba(46, 46, 46, 0.602);
+
+    --clr-dark: rgb(34, 34, 34);
+    --clr-dark-transparent: rgba(35, 35, 35, 0.409);
+
+    --clr-blue: rgb(14, 124, 235);
+    --clr-blue-transparent: rgba(144, 164, 251, 0.169);
+
+    --clr-red: rgb(252, 88, 88);
+    --clr-green: rgb(92, 232, 92);
+    --clr-yellow: rgb(237, 237, 19);
+}
+
+.theme-lightning{
+    --clr-background: black;
+    --clr-main: #f2a900;
+    --clr-main-light: #feb200c8;
+
+    --clr-text: rgb(255, 255, 255);
+    --clr-text-light: #cfcece;
+
+    --clr-light: rgba(243, 243, 243, 0.826);
+    --clr-light-transparent: rgba(46, 46, 46, 0.602);
+
+    --clr-dark: black;
+    --clr-dark-transparent: rgba(35, 35, 35, 0.409);
+
+    --clr-blue: rgb(14, 124, 235);
+    --clr-blue-transparent: rgba(144, 164, 251, 0.169);
+
+    --clr-red: rgb(252, 88, 88);
+    --clr-green: rgb(92, 232, 92);
+    --clr-yellow: rgb(237, 237, 19);
+}

@@ -1,0 +1,44 @@
+.container{
+    .element{
+        .item{
+            display: flex;
+            align-items: center;
+        }
+
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.4rem;
+            border-radius: 5px;
+            border: 1px solid var(--clr-light-transparent);
+            margin-bottom: 0.5rem;
+            transition: 0.5s ease-in-out;
+    
+
+            &:hover{
+                border-radius: 40px;
+                background-color: var(--clr-light-transparent);
+                border-color: var(--clr-main);
+            }
+        }
+        .selected{
+            background-color: var(--clr-light-transparent);
+        }
+
+        img{
+            border-radius: 50px;
+            background-color: var(--clr-light-transparent);
+            border: 1px solid var(--clr-light-transparent);
+            width: 30px;
+            height: 30px;
+            margin-right: 0.5rem;
+        }
+
+        svg{
+            display: flex;
+            font-size: 1.2rem;
+        }
+
+        }
+}

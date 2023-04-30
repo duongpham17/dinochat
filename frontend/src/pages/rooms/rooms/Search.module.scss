@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0.5rem 0;
+
+    .icon{
+        position: absolute;
+        left: 0.5rem;
+        color: rgba(128, 128, 128, 0.377);
+    }
+
+    input{
+        border: 2px solid var(--clr-light-transparent);
+        background-color: var(--clr-light-transparent);
+        padding: 0.5rem;
+        border-radius: 5px;
+        padding-left: 2rem;
+        transition: ease-in-out 0.5s;
+
+        &:hover, &:focus{
+            border-radius: 50px;
+            background-color: var(--clr-light-transparent);
+            border: 2px solid var(--clr-main);
+        }
+    }
+    input{
+        width: 100%;
+    }
+    svg{
+        display: flex;
+    }
+    .actions{
+        position: absolute;
+        right: 0.5rem;
+    }
+}

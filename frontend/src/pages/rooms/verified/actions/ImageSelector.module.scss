@@ -1,0 +1,13 @@
+.container{
+    label{
+        cursor: pointer;
+        &:hover{
+            svg{
+                color: var(--clr-main);
+            }
+        }
+    }
+    input{
+        display: none;
+    }
+}

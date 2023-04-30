@@ -1,0 +1,18 @@
+@keyframes spinner {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.loading{
+    border-radius: 50%;
+    animation: 2px 1s linear infinite;
+    display: block;
+    animation: spinner 1s linear infinite;
+    border-color: var(--clr-main);
+    border-top-color: transparent 
+}
+
+.center{
+    margin: auto;
+}

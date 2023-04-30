@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    align-items: center;
+    margin: 0.3rem 0;
+
+    a, button{
+        transition: 0.5s ease-in-out;
+        padding: 0.5rem;
+
+        &:hover{
+            background-color: var(--clr-main);
+            border-radius: 50px;
+        }
+    }
+
+    svg{
+        font-size: 1.2rem;
+        display: flex;
+    }
+
+    .selected{
+        background-color: var(--clr-light-transparent);
+        border-bottom-color: var(--clr-light-transparent) ;
+    }
+
+}

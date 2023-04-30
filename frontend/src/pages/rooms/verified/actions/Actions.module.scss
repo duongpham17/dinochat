@@ -1,0 +1,39 @@
+.container{
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--clr-dark-transparent);
+    border: 1px solid var(--clr-light-transparent);
+    border-radius: 5px;
+
+    li{
+        width: 100%;
+        text-align: center;        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg{
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+        button{
+            display: flex;
+            padding: 0.3rem;
+            &:hover{
+                svg{
+                    color: var(--clr-main);
+                }
+            }
+        }
+        .remove{
+            &:hover{
+                svg{
+                    color: var(--clr-red);
+                }
+            }
+        }
+    }
+}

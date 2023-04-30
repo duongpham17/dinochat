@@ -1,0 +1,36 @@
+.container{
+    background-color: var(--clr-background);
+    border: 2px solid var(--clr-light-transparent);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    bottom: 0.5rem;
+    padding: 0.3rem;
+
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    textarea{
+        width: 100%;
+        padding: 0 0.5rem;
+        height: 20px;
+    }
+    button{
+        padding: 0.5rem;
+        display: flex;
+        transition: ease-in-out 0.4s;
+        &:hover{
+            border-radius: 50px;
+            background-color: var(--clr-main);
+        }
+    }
+}

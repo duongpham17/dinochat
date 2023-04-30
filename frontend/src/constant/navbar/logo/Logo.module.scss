@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    align-items: center;
+    padding: 0 0.3rem;
+    transition: ease-in-out 0.5s;
+
+    &:hover{
+        background-color: var(--clr-main);
+        border-radius: 50px;
+    }
+
+    img{
+        width: 35px;
+        height: 35px;
+    }
+    
+}

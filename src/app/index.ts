@@ -7,8 +7,10 @@ import security from './security';
 import sockets from './sockets';
 
 const app = express();
-
+  
 export default (): void => {
+
+    database();
 
     security(app);
 
@@ -16,9 +18,8 @@ export default (): void => {
 
     routes(app);
 
-    database();
-
     frontend(app, express);
 
-    sockets(app)
+    sockets(app);
+    
 };

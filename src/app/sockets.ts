@@ -1,7 +1,6 @@
 import {Express} from 'express';
 import {createServer} from 'http';
 import {Server} from 'socket.io';
-import { development_frontend_url, production_frontend_url } from '../@environment';
 import sockets from '../sockets';
 
 const socket = (app: Express) => {
@@ -12,12 +11,7 @@ const socket = (app: Express) => {
 
     const server = createServer(app);
     
-    const io = new Server(server, {
-        cors: {
-            origin: development ? development_frontend_url : production_frontend_url,
-            methods: ["GET", "POST", "PATCH", "DELETE"]
-        }
-    });
+    const io = new Server(server);
 
     io.on('connection', (socket) => sockets(socket, io) );
 

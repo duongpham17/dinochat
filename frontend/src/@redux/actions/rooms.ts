@@ -2,6 +2,15 @@ import { Dispatch } from 'redux';
 import { ACTION_ROOMS, TYPES_ROOMS, RoomsObjectKeys } from '@redux/types/rooms';
 import { api } from '@redux/api';
 
+const messages = async () => {
+    try{
+        const res = await api.get(`/rooms/free/messages`);
+        return res.data.data
+    } catch(err: any){
+        console.log(err.response)
+    }
+}
+
 const search = (name: string) => async (dispatch: Dispatch<ACTION_ROOMS>) => {
     try{
         const res = await api.get(`/rooms/search/${name}`);
@@ -116,6 +125,7 @@ const state_clear = (key:RoomsObjectKeys, value: any) => async (dispatch: Dispat
 };
 
 const Rooms = {
+    messages,
     create,
     search,
     room,

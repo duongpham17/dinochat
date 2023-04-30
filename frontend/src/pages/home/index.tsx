@@ -1,11 +1,20 @@
 import styles from './Home.module.scss';
-import React from 'react';
 import {Link} from 'react-router-dom';
 import HackerText from '@components/animation/HackedText';
+import { useAppDispatch } from '@redux/hooks/useRedux';
+import Rooms from '@redux/actions/rooms';
 
 const Home = () => {
+  const dispatch = useAppDispatch();
+
+  const onClick = async () => {
+    const message = await dispatch(Rooms.messages);
+    console.log(message);
+  }
+
   return (
     <div className={styles.container}>
+        <button onClick={onClick}>click me</button>
         <h2><HackerText text="Welcome to Dinochat"/></h2>
         <br/><br/>
         <HackerText text="WARNING!"/>

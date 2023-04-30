@@ -6,8 +6,11 @@ import sockets from '../sockets';
 const socket = (app: Express) => {
 
     const port = process.env.PORT || 8000;
+
     const development = process.env.NODE_ENV === "development";
+
     const server = createServer(app);
+    
     const io = new Server(server, {
         cors: {
             origin: "*",

@@ -1,3 +1,5 @@
-url - https://dinochat.onrender.com
+https://dinochat.onrender.com
 
-A chat room that can expire at any given notice.
+A chat room that can expire at any given notice
+
+Feel free to duplicate this project and put your own twist on it.

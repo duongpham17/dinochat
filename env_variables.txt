@@ -1,0 +1,12 @@
+The environment variables stored in .env, config.env etc...
+
+NODE_ENV=<development or production>
+
+DATABASE=<YOUR MONGODB DATABASE>
+DATABASE_PASSWORD=<YOUR MONGODB PASSWORD>
+
+JWT_SECRET=<CREATE A LONG RANDOM SECRET PASSWORD E.G WEFWEFW@3f23f2332f2-23f23f23f23f23f-32f23fergerognerwgngerg-egerwgoewgneirwng-fwefwegqgewgq>
+JWT_EXPIRES=<DURATION IN NUMBER E.G 1000 will mean 1000 days>
+
+EMAIL_ADDRESS=<EMAIL_ADDRESS>
+EMAIL_PASSWORD=<EMAIL_PASSWORD>

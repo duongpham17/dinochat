@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const http_1 = require("http");
 const socket_io_1 = require("socket.io");
+const _environment_1 = require("../@environment");
 const sockets_1 = __importDefault(require("../sockets"));
 const socket = (app) => {
     const port = process.env.PORT || 8000;
@@ -12,7 +13,7 @@ const socket = (app) => {
     const server = (0, http_1.createServer)(app);
     const io = new socket_io_1.Server(server, {
         cors: {
-            origin: "*",
+            origin: development ? _environment_1.development_frontend_url : _environment_1.production_frontend_url,
             methods: ["GET", "POST", "PATCH", "DELETE"]
         }
     });

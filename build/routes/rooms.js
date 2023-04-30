@@ -7,7 +7,6 @@ const express_1 = __importDefault(require("express"));
 const authentication_1 = require("../controllers/authentication");
 const rooms_1 = require("../controllers/rooms");
 const router = express_1.default.Router();
-router.get('/free/messages', rooms_1.free);
 router.use(authentication_1.protect);
 router.get('/', rooms_1.chats);
 router.post('/', rooms_1.create);

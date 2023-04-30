@@ -6,18 +6,6 @@ import bcrypt from 'bcryptjs';
 import Rooms from '../models/rooms';
 import Messages from '../models/messages';
 
-export const free = asyncBlock(async(req: Request, res: Response, next: NextFunction) => {
-
-    const messages = await Messages.find().sort("-createdAt").limit(20);
-
-    if(!messages) return next(new appError('Could not find any chat rooms', 400));
-
-    return res.status(200).json({
-        status: "success",
-        data: messages
-    })
-});
-
 export const search = asyncBlock(async(req: InjectUserToRequest, res: Response, next: NextFunction) => {
 
     const rooms = await Rooms.find({name: {$regex: new RegExp(req.params.name, "i")}}).sort("-createdAt").limit(20);

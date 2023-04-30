@@ -12,21 +12,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.verify_private = exports.verify_public = exports.remove = exports.update = exports.create = exports.room = exports.chats = exports.search = exports.free = void 0;
+exports.verify_private = exports.verify_public = exports.remove = exports.update = exports.create = exports.room = exports.chats = exports.search = void 0;
 const logo_1 = require("../@assets/logo");
 const helper_1 = require("../@utils/helper");
 const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const rooms_1 = __importDefault(require("../models/rooms"));
 const messages_1 = __importDefault(require("../models/messages"));
-exports.free = (0, helper_1.asyncBlock)((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-    const messages = yield messages_1.default.find().sort("-createdAt").limit(20);
-    if (!messages)
-        return next(new helper_1.appError('Could not find any chat rooms', 400));
-    return res.status(200).json({
-        status: "success",
-        data: messages
-    });
-}));
 exports.search = (0, helper_1.asyncBlock)((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     const rooms = yield rooms_1.default.find({ name: { $regex: new RegExp(req.params.name, "i") } }).sort("-createdAt").limit(20);
     if (!rooms)

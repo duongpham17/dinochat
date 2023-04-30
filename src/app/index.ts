@@ -4,7 +4,7 @@ import database from './database';
 import parser from './parser';
 import routes from './routes';
 import security from './security';
-import port from './port';
+import sockets from './sockets';
 
 const app = express();
   
@@ -20,6 +20,6 @@ export default (): void => {
 
     frontend(app, express);
 
-    port(app);
+    sockets(app);
     
 };

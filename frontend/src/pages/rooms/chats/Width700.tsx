@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import useQuery from '@hooks/useQuery';
 import Message from '@components/hover/Mesage';
 import Observer from '@components/observer';
+import Round from '@components/container/Style3';
 import { AiFillCrown } from 'react-icons/ai';
 import {MdOutlineKeyboardArrowLeft, MdKeyboardArrowDown} from 'react-icons/md';
 
@@ -46,15 +47,17 @@ const Width500 = () => {
                     <div className={styles.chatList}>
                         {chats?.map(el => 
                             <Observer key={el._id}>
-                                <Link to={`?${el._id}`} className={`${styles.element} ${id.substring(1) === el._id ? styles.selected : ""}`} onClick={() => setOpen(false)}>
-                                    <div className={styles.image}>
-                                        <img src={el.image} alt="qs" />
-                                        <p>{el.name}</p>
-                                    </div>
-                                    <div className={styles.admin}>
-                                        {el.admin === user?._id && <Message message="admin"><AiFillCrown/></Message>}
-                                    </div>
-                                </Link>  
+                                <Round selected={id.substring(1) === el._id}>
+                                    <Link to={`?${el._id}`} className={styles.element} onClick={() => setOpen(false)}>
+                                        <div className={styles.image}>
+                                            <img src={el.image} alt="qs" />
+                                            <p>{el.name}</p>
+                                        </div>
+                                        <div className={styles.admin}>
+                                            {el.admin === user?._id && <Message message="admin"><AiFillCrown/></Message>}
+                                        </div>
+                                    </Link>  
+                                </Round>
                             </Observer>  
                         )}
                     </div>

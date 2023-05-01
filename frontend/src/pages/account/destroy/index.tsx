@@ -20,7 +20,7 @@ const Destory = () => {
 
     return (
         <div className={styles.container}>
-            <Summary title="Destory account" background='dark'>
+            <Summary title="Destroy account" background='dark'>
                 <Line />
                 <Button 
                     label1="Confirm extinction of account" 

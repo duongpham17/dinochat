@@ -12,5 +12,3 @@ DATABASE_PASSWORD=Password
 JWT_SECRET=make-up-secret-phrase-as-long-as-you-want
 JWT_EXPIRES=365
 ```
-
-Feel free to duplicate this project and put your own twist on it.

@@ -1,3 +1,6 @@
+# Private chatting
+Uses Websockets + MERN stack
+
 https://dinochat.onrender.com
 
 A chat room that can expire at any given notice
